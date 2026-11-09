@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Portfolio of hospitality campaigns, reels, brand identities, menus, hotel photography and websites.">
+<title>Hospitality Creative Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..700&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>body{margin:0}[hidden]{display:none!important}
+/* Layout: a hotel lobby after dark — espresso ground, brass type, work hung edge to edge; drifting poster wall in the hero */
+:root{
+  --ground:#140e0c; --band:#1c1512; --panel:#251c18; --ink:#f2e9dd; --muted:#ab9c8c; --brass:#d4ab68; --oxblood:#8a2a28;
+  --line:rgba(242,233,221,.13); --shade:rgba(12,8,7,.97);
+  --display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --body:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){
+  --ground:#efe8df; --band:#e5dcd0; --panel:#dbd0c2; --ink:#1d1512; --muted:#6b5c50; --brass:#8e6424; --oxblood:#7a1f22;
+  --line:rgba(29,21,18,.14); --shade:rgba(12,8,7,.97); color-scheme:light}}
+:root[data-theme="light"]{
+  --ground:#efe8df; --band:#e5dcd0; --panel:#dbd0c2; --ink:#1d1512; --muted:#6b5c50; --brass:#8e6424; --oxblood:#7a1f22;
+  --line:rgba(29,21,18,.14); --shade:rgba(12,8,7,.97); color-scheme:light}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--ground);color:var(--ink);font:400 16px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--ground)}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.wrap{max-width:1320px;margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.eyebrow,.tag,.dur,.chip,.nav a,.mark span,.go{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+.eyebrow{color:var(--brass);margin:0 0 14px}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;align-items:center;justify-content:center;gap:20px;
+  padding:14px max(20px,env(safe-area-inset-right,0px)) 14px max(20px,env(safe-area-inset-left,0px));
+  background:color-mix(in srgb,var(--ground) 86%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.mark{font-family:var(--display);font-style:italic;font-size:1.5rem;text-decoration:none;display:flex;align-items:baseline;gap:10px;line-height:1}
+.mark span{font-style:normal;color:var(--muted);font-size:.66rem}
+.nav{display:flex;gap:22px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{text-decoration:none;color:var(--muted);white-space:nowrap;transition:color .2s}
+.nav a:hover,.nav a.on{color:var(--ink)}
+
+/* hero */
+.hero{position:relative;padding-block:clamp(56px,9vw,120px) 0;overflow:hidden}
+.hero-copy{position:relative;z-index:2}
+.hero h1{font-size:clamp(2.4rem,6.4vw,5.6rem);line-height:1.02;letter-spacing:-.015em;max-width:15ch}
+.hero h1 em{color:var(--brass)}
+.lede{max-width:56ch;color:var(--muted);font-size:clamp(1rem,1.5vw,1.15rem);margin:28px 0 0}
+.clients{list-style:none;padding:0;margin:36px 0 0;display:flex;flex-wrap:wrap;gap:8px 0;max-width:980px}
+.clients li{font-family:var(--display);font-style:italic;font-size:clamp(1rem,1.6vw,1.25rem);color:var(--ink)}
+.clients li:not(:last-child)::after{content:"·";color:var(--brass);margin:0 .7em;font-style:normal}
+.strips{margin-top:clamp(48px,7vw,88px);display:grid;gap:14px;transform:rotate(-2.5deg) scale(1.06);transform-origin:center;padding-bottom:40px}
+.track{display:flex;gap:14px;width:max-content;animation:drift 70s linear infinite}
+.rev .track{animation-direction:reverse;animation-duration:85s}
+.track img{height:clamp(180px,24vw,300px);width:auto;border-radius:4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+@keyframes drift{to{transform:translateX(-50%)}}
+
+/* sections */
+.sec{padding-block:clamp(72px,10vw,128px)}
+.band{background:var(--band);border-block:1px solid var(--line)}
+.band.alt{background:var(--panel)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 48px;align-items:end;margin-bottom:44px}
+.sec-head .eyebrow{grid-column:1/-1}
+.sec-head h2{font-size:clamp(2.6rem,7vw,5.4rem);line-height:.95;font-style:italic;letter-spacing:-.02em}
+.sec-note{color:var(--muted);max-width:46ch;margin:0;justify-self:end}
+.sub{margin-top:64px}
+.sub h3{font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:22px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px}
+.sub h3 span{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* figures */
+.w{margin:0;break-inside:avoid;min-width:0}
+.shot{display:block;width:100%;overflow:hidden;border-radius:3px;background:var(--panel)}
+.shot img{width:100%;height:auto;transition:transform .6s cubic-bezier(.2,.7,.2,1),filter .4s}
+.shot:hover img{transform:scale(1.035)}
+figcaption{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;padding:10px 2px 0;font-size:.9rem;color:var(--muted)}
+.tag{color:var(--brass)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.chip{border:1px solid var(--line);border-radius:999px;padding:9px 16px;color:var(--muted);transition:all .2s}
+.chip:hover{color:var(--ink);border-color:var(--muted)}
+.chip.on{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+.masonry{columns:4 260px;column-gap:22px}
+.masonry .w{margin-bottom:30px}
+.masonry .w[hidden]{display:none}
+.portraits{columns:3 240px}
+
+/* films */
+.films{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,4vw,56px);max-width:1040px;margin-inline:auto}
+.film{margin:0;min-width:0}
+.phone{position:relative;aspect-ratio:9/16;max-width:100%;border-radius:26px;overflow:hidden;background:#000;border:6px solid #0b0807;box-shadow:0 0 0 1px var(--line),0 30px 60px rgba(0,0,0,.4);cursor:pointer}
+.phone video{width:100%;height:100%;object-fit:cover;display:block}
+.snd{position:absolute;right:max(10px,0px);bottom:10px;padding:7px 11px;border-radius:999px;background:rgba(0,0,0,.6);color:#f2e9dd;font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;backdrop-filter:blur(6px)}
+.snd .on{display:none}.snd[aria-pressed="true"] .on{display:inline}.snd[aria-pressed="true"] .off{display:none}
+.film figcaption{flex-direction:column;gap:2px;padding-top:16px}
+.film figcaption span:nth-child(2){color:var(--ink);font-size:1rem}
+.dur{color:var(--muted)}
+
+/* identity */
+.logos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.logo{margin:0;min-width:0}
+.logo .shot{aspect-ratio:1/1;display:grid;place-items:center;border-radius:3px}
+.logo.dark .shot{background:#0d0907}
+.logo.light .shot{background:#d1c9b8}
+.logo .shot img{width:100%;height:100%;object-fit:contain}
+.pack{display:grid;grid-template-columns:1fr 1fr .62fr;gap:22px;align-items:start}
+
+/* menus */
+.menu-row{display:grid;grid-template-columns:minmax(0,2.1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+.menu-meta{max-width:60ch;margin-bottom:24px}
+.menu-meta h3{font-size:clamp(1.6rem,3vw,2.2rem);margin:8px 0 10px}
+.menu-meta p{color:var(--muted);margin:0}
+.pages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.page{display:block;overflow:hidden;border-radius:2px;box-shadow:0 12px 30px rgba(0,0,0,.25);transition:transform .35s}
+.page:hover{transform:translateY(-4px) rotate(-.6deg)}
+.page img{width:100%;aspect-ratio:3/4;object-fit:cover}
+
+/* hotels */
+.mosaic{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-flow:dense;gap:16px}
+.mosaic .w .shot{aspect-ratio:3/2}
+.mosaic .w .shot img{height:100%;object-fit:cover}
+.mosaic .feat{grid-column:span 2;grid-row:span 2}
+.mosaic .feat .shot{aspect-ratio:3/2}
+.mosaic .wide{grid-column:span 2}
+.mosaic .wide .shot{aspect-ratio:3/1.43}
+.mosaic.small{grid-template-columns:repeat(3,minmax(0,1fr))}
+
+/* websites */
+.sites{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.site{position:relative;display:block;min-height:260px;border:1px solid var(--line);border-radius:3px;overflow:hidden;text-decoration:none;background:var(--band);transition:border-color .3s}
+.site:hover{border-color:var(--brass)}
+.site>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32;transition:opacity .4s,transform .8s}
+.site:hover>img{opacity:.45;transform:scale(1.03)}
+.site-in{position:relative;display:flex;flex-direction:column;gap:8px;padding:28px;height:100%;min-height:260px}
+.has-img .site-in{background:linear-gradient(180deg,transparent 30%,color-mix(in srgb,var(--ground) 70%,transparent))}
+.dom{font-family:var(--display);font-size:clamp(1.6rem,3.4vw,2.6rem);line-height:1.05;overflow-wrap:anywhere;margin-top:auto}
+.line{color:var(--muted)}
+.go{color:var(--brass);margin-top:8px}
+
+/* footer */
+.foot{padding-block:clamp(64px,9vw,110px) 72px;border-top:1px solid var(--line)}
+.foot .big{font-family:var(--display);font-style:italic;font-size:clamp(2rem,5.4vw,4.4rem);line-height:1.05;max-width:18ch;margin:0 0 28px;text-wrap:balance}
+.foot .small{color:var(--muted);margin:0}
+.who{font-family:var(--display);font-style:italic;font-size:clamp(2.2rem,6vw,4.4rem);line-height:1;margin:0 0 28px}
+.contact{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:18px 56px}
+.contact li{display:flex;flex-direction:column;gap:4px;min-width:0}
+.contact .k{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.contact a,.contact li>span:last-child{font-size:clamp(1.05rem,2vw,1.35rem);color:var(--ink);text-decoration:none;overflow-wrap:anywhere;user-select:all}
+.contact a:hover{color:var(--brass)}
+.foot a{color:var(--brass)}
+
+/* lightbox */
+.lb[hidden],[hidden]{display:none!important}
+.lb{position:fixed;inset:0;z-index:50;background:var(--shade);display:grid;grid-template-columns:auto 1fr auto;align-items:center;
+  padding:calc(56px + env(safe-area-inset-top,0px)) max(8px,env(safe-area-inset-right,0px)) calc(20px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-left,0px))}
+.lb figure{margin:0;display:flex;flex-direction:column;align-items:center;min-width:0;height:100%;justify-content:center}
+.lb img{max-height:calc(100vh - 150px);max-height:calc(100dvh - 150px);width:auto;max-width:100%;object-fit:contain;border-radius:2px}
+.lb figcaption{color:#d9cdbf;justify-content:center;text-align:center}
+.lb-x{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px));color:#f2e9dd;font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;padding:8px 12px;border:1px solid rgba(242,233,221,.3);border-radius:999px}
+.lb-nav{font-size:2.4rem;color:#f2e9dd;width:48px;height:64px;opacity:.75}
+.lb-nav:hover{opacity:1}
+
+@media (max-width:900px){
+  .sec-head{grid-template-columns:1fr}
+  .sec-note{justify-self:start}
+  .logos{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .menu-row{grid-template-columns:1fr}
+  .menu-app{max-width:420px}
+  .mosaic,.mosaic.small{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pack{grid-template-columns:1fr 1fr}
+  .films{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .phone{border-width:4px;border-radius:18px}
+}
+@media (max-width:640px){
+  .nav{gap:18px;width:100%}
+  .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-4px;padding-inline:4px}
+  .chip{white-space:nowrap;flex:none}
+  .masonry,.portraits{columns:2;column-gap:12px}
+  .masonry .w{margin-bottom:18px}
+  figcaption{font-size:.8rem}
+  .masonry figcaption .tag{display:none}
+  .logos{gap:12px}.pack{gap:12px}.mosaic{gap:10px}
+  .track img{height:150px}
+  .films{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:72%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+  .film{scroll-snap-align:start}
+  .sites{grid-template-columns:1fr}
+  .pages{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mosaic .feat{grid-row:span 1}
+  .lb{grid-template-columns:1fr}
+  .lb-nav{position:absolute;bottom:calc(14px + env(safe-area-inset-bottom,0px))}
+  .lb-nav.prev{left:max(16px,env(safe-area-inset-left,0px))}.lb-nav.next{right:max(16px,env(safe-area-inset-right,0px))}
+  .lb img{max-height:calc(100dvh - 190px)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .track{animation:none}
+  .shot img,.page,.site>img{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top" id="top">
+  <nav class="nav" aria-label="Sections">
+    <a href="#campaigns">Campaigns</a><a href="#films">Films</a><a href="#identity">Identity</a><a href="#menus">Menus</a>
+    <a href="#hotels">Hotels</a><a href="#portraits">Portraits</a><a href="#websites">Websites</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-copy wrap">
+    <p class="eyebrow">Hospitality &amp; lifestyle creative · Hyderabad</p>
+    <h1>Posters, brands, menus, <em>films</em> and hotel photography that make people want to walk in.</h1>
+    <p class="lede">Selected work for hotels, restaurants, bars and food brands, from the first logo sketch to the shoot, the Instagram grid and the booking website.</p>
+    <ul class="clients" aria-label="Clients">
+      <li>Hotel Narenn</li><li>Elysium Drink &amp; Dine</li><li>Athidhi Aalayam</li><li>Park Continental Hotel</li><li>The Livin</li>
+      <li>Abode by Shree Venkateshwara</li><li>Bloom</li><li>Magic Oven</li><li>Anra Homes</li><li>Hotel Hampshire Plaza</li><li>Hotel Vasantha Inn</li>
+    </ul>
+  </div>
+  <div class="strips" aria-hidden="true"><div class="track"><img src="img/elysium-karaoke-t.webp" alt="" style="aspect-ratio:1250/1867"><img src="img/narenn-keyhole-t.webp" alt="" style="aspect-ratio:1080/1350"><img src="img/athidhi-post-t.webp" alt="" style="aspect-ratio:1080/1350"><img src="img/parkcontinental-t.webp" alt="" style="aspect-ratio:1080/1350"><img src="img/narenn-navratri-t.webp" alt="" style="aspect-ratio:900/1600"><img src="img/elysium-bollywood-t.webp" alt="" style="aspect-ratio:1080/1350"><img src="img/livin-app-t.webp" alt="" style="aspect-ratio:1024/1536"><img src="img/narenn-weekend-t.webp" alt="" style="aspect-ratio:900/1600"><img src="img/elysium-karaoke-t.webp" alt="" style="aspect-ratio:1250/1867"><img src="img/narenn-keyhole-t.webp" alt="" style="aspect-ratio:1080/1350"><img src="img/athidhi-post-t.webp" alt="" style="aspect-ratio:1080/1350"><img src="img/parkcontinental-t.webp" alt="" style="aspect-ratio:1080/1350"><img src="img/narenn-navratri-t.webp" alt="" style="aspect-ratio:900/1600"><img src="img/elysium-bollywood-t.webp" alt="" style="aspect-ratio:1080/1350"><img src="img/livin-app-t.webp" alt="" style="aspect-ratio:1024/1536"><img src="img/narenn-weekend-t.webp" alt="" style="aspect-ratio:900/1600"></div><div class="rev"><div class="track"><img src="img/logo-elysium-t.webp" alt="" style="aspect-ratio:1563/1563"><img src="img/narenn-relax-t.webp" alt="" style="aspect-ratio:1122/1402"><img src="img/elysium-ladies-t.webp" alt="" style="aspect-ratio:1080/1350"><img src="img/logo-athidhi-t.webp" alt="" style="aspect-ratio:1563/1563"><img src="img/narenn-dussehra-t.webp" alt="" style="aspect-ratio:1080/1920"><img src="img/bloom-pack-1-t.webp" alt="" style="aspect-ratio:1024/1024"><img src="img/elysium-happyhour-t.webp" alt="" style="aspect-ratio:1080/1350"><img src="img/narenn-softbed-t.webp" alt="" style="aspect-ratio:1122/1402"><img src="img/logo-elysium-t.webp" alt="" style="aspect-ratio:1563/1563"><img src="img/narenn-relax-t.webp" alt="" style="aspect-ratio:1122/1402"><img src="img/elysium-ladies-t.webp" alt="" style="aspect-ratio:1080/1350"><img src="img/logo-athidhi-t.webp" alt="" style="aspect-ratio:1563/1563"><img src="img/narenn-dussehra-t.webp" alt="" style="aspect-ratio:1080/1920"><img src="img/bloom-pack-1-t.webp" alt="" style="aspect-ratio:1024/1024"><img src="img/elysium-happyhour-t.webp" alt="" style="aspect-ratio:1080/1350"><img src="img/narenn-softbed-t.webp" alt="" style="aspect-ratio:1122/1402"></div></div></div>
+</section>
+
+<section id="campaigns" class="sec wrap">
+  <div class="sec-head"><p class="eyebrow">Social media &amp; promotion</p><h2>Campaigns</h2>
+  <p class="sec-note">Event posters, festive greetings, offer stories and brand posts made for Instagram and Facebook.</p></div>
+  <div class="chips" role="group" aria-label="Filter by client"><button class="chip on" data-f="all">All work</button><button class="chip" data-f="Hotel Narenn">Hotel Narenn</button><button class="chip" data-f="Elysium Drink &amp; Dine">Elysium Drink &amp; Dine</button><button class="chip" data-f="Athidhi Aalayam">Athidhi Aalayam</button><button class="chip" data-f="The Livin">The Livin</button><button class="chip" data-f="Park Continental Hotel">Park Continental Hotel</button></div>
+  <div class="masonry" id="campaign-grid"><figure class="w " data-tag="Hotel Narenn"><button class="shot" data-full="img/narenn-keyhole.webp" data-group="camp" data-cap="Hotel Narenn — “Your key of comfort” post" aria-label="Open “Your key of comfort” post"><img src="img/narenn-keyhole-t.webp" alt="Hotel Narenn, “Your key of comfort” post" loading="lazy" decoding="async" style="aspect-ratio:1080/1350"></button><figcaption><span class="tag">Hotel Narenn</span><span>“Your key of comfort” post</span></figcaption></figure><figure class="w " data-tag="Elysium Drink &amp; Dine"><button class="shot" data-full="img/elysium-karaoke.webp" data-group="camp" data-cap="Elysium Drink &amp; Dine — Karaoke Night poster" aria-label="Open Karaoke Night poster"><img src="img/elysium-karaoke-t.webp" alt="Elysium Drink &amp; Dine, Karaoke Night poster" loading="lazy" decoding="async" style="aspect-ratio:1250/1867"></button><figcaption><span class="tag">Elysium Drink &amp; Dine</span><span>Karaoke Night poster</span></figcaption></figure><figure class="w " data-tag="Park Continental Hotel"><button class="shot" data-full="img/parkcontinental.webp" data-group="camp" data-cap="Park Continental Hotel — “Some stories are worth staying for” post" aria-label="Open “Some stories are worth staying for” post"><img src="img/parkcontinental-t.webp" alt="Park Continental Hotel, “Some stories are worth staying for” post" loading="lazy" decoding="async" style="aspect-ratio:1080/1350"></button><figcaption><span class="tag">Park Continental Hotel</span><span>“Some stories are worth staying for” post</span></figcaption></figure><figure class="w " data-tag="Hotel Narenn"><button class="shot" data-full="img/narenn-navratri.webp" data-group="camp" data-cap="Hotel Narenn — Navratri festive greeting" aria-label="Open Navratri festive greeting"><img src="img/narenn-navratri-t.webp" alt="Hotel Narenn, Navratri festive greeting" loading="lazy" decoding="async" style="aspect-ratio:900/1600"></button><figcaption><span class="tag">Hotel Narenn</span><span>Navratri festive greeting</span></figcaption></figure><figure class="w " data-tag="Elysium Drink &amp; Dine"><button class="shot" data-full="img/elysium-bollywood.webp" data-group="camp" data-cap="Elysium Drink &amp; Dine — Bollywood Night poster" aria-label="Open Bollywood Night poster"><img src="img/elysium-bollywood-t.webp" alt="Elysium Drink &amp; Dine, Bollywood Night poster" loading="lazy" decoding="async" style="aspect-ratio:1080/1350"></button><figcaption><span class="tag">Elysium Drink &amp; Dine</span><span>Bollywood Night poster</span></figcaption></figure><figure class="w " data-tag="Hotel Narenn"><button class="shot" data-full="img/narenn-relax.webp" data-group="camp" data-cap="Hotel Narenn — “Relax” model post" aria-label="Open “Relax” model post"><img src="img/narenn-relax-t.webp" alt="Hotel Narenn, “Relax” model post" loading="lazy" decoding="async" style="aspect-ratio:1122/1402"></button><figcaption><span class="tag">Hotel Narenn</span><span>“Relax” model post</span></figcaption></figure><figure class="w " data-tag="The Livin"><button class="shot" data-full="img/livin-app.webp" data-group="camp" data-cap="The Livin — Room booking poster" aria-label="Open Room booking poster"><img src="img/livin-app-t.webp" alt="The Livin, Room booking poster" loading="lazy" decoding="async" style="aspect-ratio:1024/1536"></button><figcaption><span class="tag">The Livin</span><span>Room booking poster</span></figcaption></figure><figure class="w " data-tag="Hotel Narenn"><button class="shot" data-full="img/narenn-weekend.webp" data-group="camp" data-cap="Hotel Narenn — Weekend Staycation story" aria-label="Open Weekend Staycation story"><img src="img/narenn-weekend-t.webp" alt="Hotel Narenn, Weekend Staycation story" loading="lazy" decoding="async" style="aspect-ratio:900/1600"></button><figcaption><span class="tag">Hotel Narenn</span><span>Weekend Staycation story</span></figcaption></figure><figure class="w " data-tag="Elysium Drink &amp; Dine"><button class="shot" data-full="img/elysium-ladies.webp" data-group="camp" data-cap="Elysium Drink &amp; Dine — Ladies Night poster" aria-label="Open Ladies Night poster"><img src="img/elysium-ladies-t.webp" alt="Elysium Drink &amp; Dine, Ladies Night poster" loading="lazy" decoding="async" style="aspect-ratio:1080/1350"></button><figcaption><span class="tag">Elysium Drink &amp; Dine</span><span>Ladies Night poster</span></figcaption></figure><figure class="w " data-tag="Hotel Narenn"><button class="shot" data-full="img/narenn-softbed.webp" data-group="camp" data-cap="Hotel Narenn — “A soft bed, a quiet night” post" aria-label="Open “A soft bed, a quiet night” post"><img src="img/narenn-softbed-t.webp" alt="Hotel Narenn, “A soft bed, a quiet night” post" loading="lazy" decoding="async" style="aspect-ratio:1122/1402"></button><figcaption><span class="tag">Hotel Narenn</span><span>“A soft bed, a quiet night” post</span></figcaption></figure><figure class="w " data-tag="Athidhi Aalayam"><button class="shot" data-full="img/athidhi-post.webp" data-group="camp" data-cap="Athidhi Aalayam — Instagram food post" aria-label="Open Instagram food post"><img src="img/athidhi-post-t.webp" alt="Athidhi Aalayam, Instagram food post" loading="lazy" decoding="async" style="aspect-ratio:1080/1350"></button><figcaption><span class="tag">Athidhi Aalayam</span><span>Instagram food post</span></figcaption></figure><figure class="w " data-tag="Hotel Narenn"><button class="shot" data-full="img/narenn-dussehra.webp" data-group="camp" data-cap="Hotel Narenn — Dussehra pool-side offer story" aria-label="Open Dussehra pool-side offer story"><img src="img/narenn-dussehra-t.webp" alt="Hotel Narenn, Dussehra pool-side offer story" loading="lazy" decoding="async" style="aspect-ratio:1080/1920"></button><figcaption><span class="tag">Hotel Narenn</span><span>Dussehra pool-side offer story</span></figcaption></figure><figure class="w " data-tag="Hotel Narenn"><button class="shot" data-full="img/narenn-refresh.webp" data-group="camp" data-cap="Hotel Narenn — “Pause. Sip. Refresh.” model post" aria-label="Open “Pause. Sip. Refresh.” model post"><img src="img/narenn-refresh-t.webp" alt="Hotel Narenn, “Pause. Sip. Refresh.” model post" loading="lazy" decoding="async" style="aspect-ratio:1122/1402"></button><figcaption><span class="tag">Hotel Narenn</span><span>“Pause. Sip. Refresh.” model post</span></figcaption></figure><figure class="w " data-tag="Elysium Drink &amp; Dine"><button class="shot" data-full="img/elysium-happyhour.webp" data-group="camp" data-cap="Elysium Drink &amp; Dine — Happy Hour poster" aria-label="Open Happy Hour poster"><img src="img/elysium-happyhour-t.webp" alt="Elysium Drink &amp; Dine, Happy Hour poster" loading="lazy" decoding="async" style="aspect-ratio:1080/1350"></button><figcaption><span class="tag">Elysium Drink &amp; Dine</span><span>Happy Hour poster</span></figcaption></figure><figure class="w " data-tag="Hotel Narenn"><button class="shot" data-full="img/narenn-reveal.webp" data-group="camp" data-cap="Hotel Narenn — Building reveal teaser" aria-label="Open Building reveal teaser"><img src="img/narenn-reveal-t.webp" alt="Hotel Narenn, Building reveal teaser" loading="lazy" decoding="async" style="aspect-ratio:900/1600"></button><figcaption><span class="tag">Hotel Narenn</span><span>Building reveal teaser</span></figcaption></figure></div>
+</section>
+<section id="films" class="band"><div class="wrap sec">
+  <div class="sec-head"><p class="eyebrow">Video</p><h2>Films &amp; reels</h2>
+  <p class="sec-note">Vertical edits for Reels and Stories. Tap a reel to play or pause it.</p></div>
+  <div class="films"><figure class="film"><div class="phone"><video src="vid/narenn-pool.mp4" poster="vid/narenn-pool.jpg" muted loop playsinline preload="metadata"></video>
+<button class="snd" aria-label="Turn sound on" aria-pressed="false"><span class="on">Sound on</span><span class="off">Muted</span></button></div>
+<figcaption><span class="tag">Hotel Narenn</span><span>Rooftop pool — day vs night</span><span class="dur">7 sec reel</span></figcaption></figure><figure class="film"><div class="phone"><video src="vid/athidhi-trailer.mp4" poster="vid/athidhi-trailer.jpg" muted loop playsinline preload="metadata"></video>
+<button class="snd" aria-label="Turn sound on" aria-pressed="false"><span class="on">Sound on</span><span class="off">Muted</span></button></div>
+<figcaption><span class="tag">Athidhi Aalayam</span><span>“Opening soon” launch trailer</span><span class="dur">32 sec reel</span></figcaption></figure><figure class="film"><div class="phone"><video src="vid/kuldhara.mp4" poster="vid/kuldhara.jpg" muted loop playsinline preload="metadata"></video>
+<button class="snd" aria-label="Turn sound on" aria-pressed="false"><span class="on">Sound on</span><span class="off">Muted</span></button></div>
+<figcaption><span class="tag">Kuldhara</span><span>Animated story, “based on a real incident”</span><span class="dur">37 sec reel</span></figcaption></figure></div>
+</div></section>
+<section id="identity" class="sec wrap">
+  <div class="sec-head"><p class="eyebrow">Branding</p><h2>Brand identity</h2>
+  <p class="sec-note">Logos and the material they live on: packaging labels and in-room collateral.</p></div>
+  <div class="logos"><figure class="logo dark"><button class="shot" data-full="img/logo-elysium.webp" data-group="logo" data-cap="Elysium Drink &amp; Dine — Logo" aria-label="Open Elysium Drink &amp; Dine Logo"><img src="img/logo-elysium-t.webp" alt="Elysium Drink &amp; Dine Logo" loading="lazy"></button><figcaption><span class="tag">Elysium Drink &amp; Dine</span><span>Logo</span></figcaption></figure><figure class="logo dark"><button class="shot" data-full="img/logo-athidhi.webp" data-group="logo" data-cap="Athidhi Aalayam — Logo" aria-label="Open Athidhi Aalayam Logo"><img src="img/logo-athidhi-t.webp" alt="Athidhi Aalayam Logo" loading="lazy"></button><figcaption><span class="tag">Athidhi Aalayam</span><span>Logo</span></figcaption></figure><figure class="logo light"><button class="shot" data-full="img/logo-bloom-leaf.webp" data-group="logo" data-cap="Bloom — Logo with leaf mark" aria-label="Open Bloom Logo with leaf mark"><img src="img/logo-bloom-leaf-t.webp" alt="Bloom Logo with leaf mark" loading="lazy"></button><figcaption><span class="tag">Bloom</span><span>Logo with leaf mark</span></figcaption></figure><figure class="logo light"><button class="shot" data-full="img/logo-anra.webp" data-group="logo" data-cap="Anra Homes — Logo" aria-label="Open Anra Homes Logo"><img src="img/logo-anra-t.webp" alt="Anra Homes Logo" loading="lazy"></button><figcaption><span class="tag">Anra Homes</span><span>Logo</span></figcaption></figure><figure class="logo dark"><button class="shot" data-full="img/logo-magicoven.webp" data-group="logo" data-cap="Magic Oven — Logo — “Homebaked Happiness”" aria-label="Open Magic Oven Logo — “Homebaked Happiness”"><img src="img/logo-magicoven-t.webp" alt="Magic Oven Logo — “Homebaked Happiness”" loading="lazy"></button><figcaption><span class="tag">Magic Oven</span><span>Logo — “Homebaked Happiness”</span></figcaption></figure><figure class="logo light"><button class="shot" data-full="img/logo-bloom-script.webp" data-group="logo" data-cap="Bloom — Logo, script version" aria-label="Open Bloom Logo, script version"><img src="img/logo-bloom-script-t.webp" alt="Bloom Logo, script version" loading="lazy"></button><figcaption><span class="tag">Bloom</span><span>Logo, script version</span></figcaption></figure></div>
+  <div class="sub">
+    <h3>Packaging</h3>
+    <div class="pack"><figure class="w " data-tag="Bloom"><button class="shot" data-full="img/bloom-pack-1.webp" data-group="pack" data-cap="Bloom — Label layout, horizontal" aria-label="Open Label layout, horizontal"><img src="img/bloom-pack-1-t.webp" alt="Bloom, Label layout, horizontal" loading="lazy" decoding="async" style="aspect-ratio:1024/1024"></button><figcaption><span class="tag">Bloom</span><span>Label layout, horizontal</span></figcaption></figure><figure class="w " data-tag="Bloom"><button class="shot" data-full="img/bloom-pack-2.webp" data-group="pack" data-cap="Bloom — Label layout, stacked" aria-label="Open Label layout, stacked"><img src="img/bloom-pack-2-t.webp" alt="Bloom, Label layout, stacked" loading="lazy" decoding="async" style="aspect-ratio:1024/1024"></button><figcaption><span class="tag">Bloom</span><span>Label layout, stacked</span></figcaption></figure><figure class="w " data-tag="The Livin"><button class="shot" data-full="img/livin-dnd.webp" data-group="pack" data-cap="The Livin — “Do Not Disturb” door hanger" aria-label="Open “Do Not Disturb” door hanger"><img src="img/livin-dnd-t.webp" alt="The Livin, “Do Not Disturb” door hanger" loading="lazy" decoding="async" style="aspect-ratio:1024/1536"></button><figcaption><span class="tag">The Livin</span><span>“Do Not Disturb” door hanger</span></figcaption></figure></div>
+  </div>
+</section>
+<section id="menus" class="band alt"><div class="wrap sec">
+  <div class="sec-head"><p class="eyebrow">Food &amp; beverage</p><h2>Menus</h2></div>
+  <div class="menu-row">
+    <div class="menu-book">
+      <div class="menu-meta"><span class="tag">Hotel Narenn</span><h3>In-room dining menu</h3><p>Six pages: cover, breakfast, soups &amp; starters, biryani &amp; mains, light bites &amp; desserts, and a page on the hotel’s outlets and facilities.</p></div>
+      <div class="pages"><button class="page shot" data-full="img/menu-1.webp" data-group="menu" data-cap="Hotel Narenn — Room service menu, page 1 of 6" aria-label="Open menu page 1"><img src="img/menu-1-t.webp" alt="Narenn room service menu, page 1" loading="lazy"></button><button class="page shot" data-full="img/menu-2.webp" data-group="menu" data-cap="Hotel Narenn — Room service menu, page 2 of 6" aria-label="Open menu page 2"><img src="img/menu-2-t.webp" alt="Narenn room service menu, page 2" loading="lazy"></button><button class="page shot" data-full="img/menu-3.webp" data-group="menu" data-cap="Hotel Narenn — Room service menu, page 3 of 6" aria-label="Open menu page 3"><img src="img/menu-3-t.webp" alt="Narenn room service menu, page 3" loading="lazy"></button><button class="page shot" data-full="img/menu-4.webp" data-group="menu" data-cap="Hotel Narenn — Room service menu, page 4 of 6" aria-label="Open menu page 4"><img src="img/menu-4-t.webp" alt="Narenn room service menu, page 4" loading="lazy"></button><button class="page shot" data-full="img/menu-5.webp" data-group="menu" data-cap="Hotel Narenn — Room service menu, page 5 of 6" aria-label="Open menu page 5"><img src="img/menu-5-t.webp" alt="Narenn room service menu, page 5" loading="lazy"></button><button class="page shot" data-full="img/menu-6.webp" data-group="menu" data-cap="Hotel Narenn — Room service menu, page 6 of 6" aria-label="Open menu page 6"><img src="img/menu-6-t.webp" alt="Narenn room service menu, page 6" loading="lazy"></button></div>
+    </div>
+    <div class="menu-app"><figure class="w " data-tag="Athidhi Aalayam"><button class="shot" data-full="img/athidhi-menu.webp" data-group="menu2" data-cap="Athidhi Aalayam — App-style breakfast menu post" aria-label="Open App-style breakfast menu post"><img src="img/athidhi-menu-t.webp" alt="Athidhi Aalayam, App-style breakfast menu post" loading="lazy" decoding="async" style="aspect-ratio:1080/1350"></button><figcaption><span class="tag">Athidhi Aalayam</span><span>App-style breakfast menu post</span></figcaption></figure></div>
+  </div>
+</div></section>
+<section id="hotels" class="sec wrap">
+  <div class="sec-head"><p class="eyebrow">Photography</p><h2>Hotel photography</h2>
+  <p class="sec-note">Property shoots used across OTA listings, websites and social media. Properties shot: Hotel Narenn, Hotel Vasantha Inn, Abode and Hotel Destin Prrime.</p></div>
+  <div class="sub"><h3>Hotel Narenn <span>HITEC City, Hyderabad</span></h3><div class="mosaic"><figure class="w feat"><button class="shot" data-full="img/nr-pool-night.webp" data-group="nr" data-cap="Rooftop pool at night" aria-label="Open Rooftop pool at night"><img src="img/nr-pool-night-t.webp" alt="Rooftop pool at night" loading="lazy" decoding="async" style="aspect-ratio:2576/1719"></button><figcaption><span>Rooftop pool at night</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/nr-lobby.webp" data-group="nr" data-cap="Lobby lounge" aria-label="Open Lobby lounge"><img src="img/nr-lobby-t.webp" alt="Lobby lounge" loading="lazy" decoding="async" style="aspect-ratio:5151/3436"></button><figcaption><span>Lobby lounge</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/nr-reception.webp" data-group="nr" data-cap="Reception" aria-label="Open Reception"><img src="img/nr-reception-t.webp" alt="Reception" loading="lazy" decoding="async" style="aspect-ratio:2072/1553"></button><figcaption><span>Reception</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/nr-room-arc.webp" data-group="nr" data-cap="Room with lit arc ceiling" aria-label="Open Room with lit arc ceiling"><img src="img/nr-room-arc-t.webp" alt="Room with lit arc ceiling" loading="lazy" decoding="async" style="aspect-ratio:2576/1718"></button><figcaption><span>Room with lit arc ceiling</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/nr-room-teal.webp" data-group="nr" data-cap="Room with teal headboard" aria-label="Open Room with teal headboard"><img src="img/nr-room-teal-t.webp" alt="Room with teal headboard" loading="lazy" decoding="async" style="aspect-ratio:2576/1718"></button><figcaption><span>Room with teal headboard</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/nr-facade.webp" data-group="nr" data-cap="Building front" aria-label="Open Building front"><img src="img/nr-facade-t.webp" alt="Building front" loading="lazy" decoding="async" style="aspect-ratio:2576/1718"></button><figcaption><span>Building front</span></figcaption></figure><figure class="w wide"><button class="shot" data-full="img/nr-restaurant.webp" data-group="nr" data-cap="Restaurant" aria-label="Open Restaurant"><img src="img/nr-restaurant-t.webp" alt="Restaurant" loading="lazy" decoding="async" style="aspect-ratio:2576/1718"></button><figcaption><span>Restaurant</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/nr-pool-day.webp" data-group="nr" data-cap="Rooftop pool by day" aria-label="Open Rooftop pool by day"><img src="img/nr-pool-day-t.webp" alt="Rooftop pool by day" loading="lazy" decoding="async" style="aspect-ratio:2576/1719"></button><figcaption><span>Rooftop pool by day</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/nr-seating.webp" data-group="nr" data-cap="Window seating" aria-label="Open Window seating"><img src="img/nr-seating-t.webp" alt="Window seating" loading="lazy" decoding="async" style="aspect-ratio:2576/1719"></button><figcaption><span>Window seating</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/nr-room-teal-2.webp" data-group="nr" data-cap="Room, second angle" aria-label="Open Room, second angle"><img src="img/nr-room-teal-2-t.webp" alt="Room, second angle" loading="lazy" decoding="async" style="aspect-ratio:2576/1718"></button><figcaption><span>Room, second angle</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/nr-room-arc-2.webp" data-group="nr" data-cap="Room, entrance view" aria-label="Open Room, entrance view"><img src="img/nr-room-arc-2-t.webp" alt="Room, entrance view" loading="lazy" decoding="async" style="aspect-ratio:2576/1718"></button><figcaption><span>Room, entrance view</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/nr-terrace.webp" data-group="nr" data-cap="Pool terrace" aria-label="Open Pool terrace"><img src="img/nr-terrace-t.webp" alt="Pool terrace" loading="lazy" decoding="async" style="aspect-ratio:2576/1718"></button><figcaption><span>Pool terrace</span></figcaption></figure></div></div>
+  <div class="sub"><h3>More property shoots</h3><div class="mosaic small"><figure class="w " data-tag="Abode by Shree Venkateshwara Hotel"><button class="shot" data-full="img/ab-entrance.webp" data-group="oh" data-cap="Abode by Shree Venkateshwara Hotel — Entrance" aria-label="Open Entrance"><img src="img/ab-entrance-t.webp" alt="Abode by Shree Venkateshwara Hotel, Entrance" loading="lazy" decoding="async" style="aspect-ratio:1537/1023"></button><figcaption><span class="tag">Abode by Shree Venkateshwara Hotel</span><span>Entrance</span></figcaption></figure><figure class="w " data-tag="Abode by Shree Venkateshwara Hotel"><button class="shot" data-full="img/ab-sign.webp" data-group="oh" data-cap="Abode by Shree Venkateshwara Hotel — Signage" aria-label="Open Signage"><img src="img/ab-sign-t.webp" alt="Abode by Shree Venkateshwara Hotel, Signage" loading="lazy" decoding="async" style="aspect-ratio:1537/1023"></button><figcaption><span class="tag">Abode by Shree Venkateshwara Hotel</span><span>Signage</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/ht-room-red.webp" data-group="oh" data-cap="Guest room" aria-label="Open Guest room"><img src="img/ht-room-red-t.webp" alt="Guest room" loading="lazy" decoding="async" style="aspect-ratio:1672/941"></button><figcaption><span>Guest room</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/ht-room-plum.webp" data-group="oh" data-cap="Bedside detail" aria-label="Open Bedside detail"><img src="img/ht-room-plum-t.webp" alt="Bedside detail" loading="lazy" decoding="async" style="aspect-ratio:1448/1086"></button><figcaption><span>Bedside detail</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/ht-pool.webp" data-group="oh" data-cap="Rooftop pool" aria-label="Open Rooftop pool"><img src="img/ht-pool-t.webp" alt="Rooftop pool" loading="lazy" decoding="async" style="aspect-ratio:1537/1023"></button><figcaption><span>Rooftop pool</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/ht-lounge.webp" data-group="oh" data-cap="Bar lounge" aria-label="Open Bar lounge"><img src="img/ht-lounge-t.webp" alt="Bar lounge" loading="lazy" decoding="async" style="aspect-ratio:1535/1024"></button><figcaption><span>Bar lounge</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/ht-room-red-2.webp" data-group="oh" data-cap="Guest room, front view" aria-label="Open Guest room, front view"><img src="img/ht-room-red-2-t.webp" alt="Guest room, front view" loading="lazy" decoding="async" style="aspect-ratio:1536/1024"></button><figcaption><span>Guest room, front view</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/ht-cushions.webp" data-group="oh" data-cap="Bed detail" aria-label="Open Bed detail"><img src="img/ht-cushions-t.webp" alt="Bed detail" loading="lazy" decoding="async" style="aspect-ratio:1536/1024"></button><figcaption><span>Bed detail</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/ht-pool-2.webp" data-group="oh" data-cap="Rooftop pool, second view" aria-label="Open Rooftop pool, second view"><img src="img/ht-pool-2-t.webp" alt="Rooftop pool, second view" loading="lazy" decoding="async" style="aspect-ratio:1537/1023"></button><figcaption><span>Rooftop pool, second view</span></figcaption></figure></div></div>
+</section>
+<section id="portraits" class="band"><div class="wrap sec">
+  <div class="sec-head"><p class="eyebrow">Model photoshoot</p><h2>Anjali Kothari</h2>
+  <p class="sec-note">A portrait series across studio, street, heritage and festive looks.</p></div>
+  <div class="masonry portraits"><figure class="w "><button class="shot" data-full="img/ak-teal-2.webp" data-group="ak" data-cap="Teal saree" aria-label="Open Teal saree"><img src="img/ak-teal-2-t.webp" alt="Teal saree" loading="lazy" decoding="async" style="aspect-ratio:853/1280"></button><figcaption><span>Teal saree</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/ak-hibiscus.webp" data-group="ak" data-cap="Hibiscus" aria-label="Open Hibiscus"><img src="img/ak-hibiscus-t.webp" alt="Hibiscus" loading="lazy" decoding="async" style="aspect-ratio:1932/2576"></button><figcaption><span>Hibiscus</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/ak-doorstep.webp" data-group="ak" data-cap="Half-saree at the doorstep" aria-label="Open Half-saree at the doorstep"><img src="img/ak-doorstep-t.webp" alt="Half-saree at the doorstep" loading="lazy" decoding="async" style="aspect-ratio:1200/1600"></button><figcaption><span>Half-saree at the doorstep</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/ak-white.webp" data-group="ak" data-cap="White gown" aria-label="Open White gown"><img src="img/ak-white-t.webp" alt="White gown" loading="lazy" decoding="async" style="aspect-ratio:853/1280"></button><figcaption><span>White gown</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/ak-floral.webp" data-group="ak" data-cap="Floral dress, studio" aria-label="Open Floral dress, studio"><img src="img/ak-floral-t.webp" alt="Floral dress, studio" loading="lazy" decoding="async" style="aspect-ratio:853/1280"></button><figcaption><span>Floral dress, studio</span></figcaption></figure><figure class="w "><button class="shot" data-full="img/ak-black.webp" data-group="ak" data-cap="Black saree, temple courtyard" aria-label="Open Black saree, temple courtyard"><img src="img/ak-black-t.webp" alt="Black saree, temple courtyard" loading="lazy" decoding="async" style="aspect-ratio:853/1280"></button><figcaption><span>Black saree, temple courtyard</span></figcaption></figure></div>
+</div></section>
+<section id="websites" class="sec wrap">
+  <div class="sec-head"><p class="eyebrow">Web</p><h2>Websites</h2>
+  <p class="sec-note">Hotel booking websites built for direct bookings. Each one is live; open it to look around.</p></div>
+  <div class="sites"><a class="site has-img" href="https://www.hotelnarenn.com" target="_blank" rel="noopener"><img src="img/nr-facade-t.webp" alt="" loading="lazy">
+<span class="site-in"><span class="tag">Hotel Narenn</span><span class="dom">hotelnarenn.com</span><span class="line">Business hotel in HITEC City, Hyderabad</span><span class="go">Visit site ↗</span></span></a><a class="site" href="https://www.hotelhampshireplaza.com" target="_blank" rel="noopener">
+<span class="site-in"><span class="tag">Hotel Hampshire Plaza</span><span class="dom">hotelhampshireplaza.com</span><span class="line">Hotel website</span><span class="go">Visit site ↗</span></span></a><a class="site" href="https://www.hotelvasanthainn.com" target="_blank" rel="noopener">
+<span class="site-in"><span class="tag">Hotel Vasantha Inn</span><span class="dom">hotelvasanthainn.com</span><span class="line">Hotel website</span><span class="go">Visit site ↗</span></span></a><a class="site" href="https://www.revineo.com" target="_blank" rel="noopener">
+<span class="site-in"><span class="tag">Revineo</span><span class="dom">revineo.com</span><span class="line">Your Partner in Profitable Hospitality</span><span class="go">Visit site ↗</span></span></a></div>
+</section>
+
+<footer class="foot wrap">
+  <p class="eyebrow">Contact</p>
+  <p class="who">Anjali Kothari</p>
+  <ul class="contact">
+    <li><span class="k">Email</span><a href="mailto:anjali.kothari605@gmail.com">anjali.kothari605@gmail.com</a></li>
+    <li><span class="k">Phone</span><a href="tel:+919347131314">93471 31314</a></li>
+    <li><span class="k">Based in</span><span>Hyderabad</span></li>
+  </ul>
+</footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-x" id="lbx" aria-label="Close">Close</button>
+  <button class="lb-nav prev" id="lbp" aria-label="Previous">‹</button>
+  <figure><img id="lbi" alt=""><figcaption id="lbc"></figcaption></figure>
+  <button class="lb-nav next" id="lbn" aria-label="Next">›</button>
+</div>
+<script>(function(){
+  // client filter
+  var chips=document.querySelectorAll('.chip'), items=document.querySelectorAll('#campaign-grid .w');
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    chips.forEach(function(x){x.classList.toggle('on',x===c)});
+    var f=c.dataset.f;
+    items.forEach(function(it){it.hidden=!(f==='all'||it.dataset.tag===f)});
+  })});
+
+  // lightbox
+  var lb=document.getElementById('lb'),lbi=document.getElementById('lbi'),lbc=document.getElementById('lbc'),list=[],idx=0,last=null;
+  function show(i){idx=(i+list.length)%list.length;var b=list[idx];lbi.src=b.dataset.full;lbi.alt=b.dataset.cap;lbc.textContent=b.dataset.cap+'  ·  '+(idx+1)+' / '+list.length}
+  document.addEventListener('click',function(ev){
+    var b=ev.target.closest('.shot');if(!b||!b.dataset.full)return;
+    last=b;list=[].filter.call(document.querySelectorAll('.shot[data-group="'+b.dataset.group+'"]'),function(x){var w=x.closest('.w');return !(w&&w.hidden)});
+    show(list.indexOf(b));lb.hidden=false;document.body.style.overflow='hidden';document.getElementById('lbx').focus();
+  });
+  function close(){lb.hidden=true;lbi.removeAttribute('src');document.body.style.overflow='';if(last)last.focus()}
+  document.getElementById('lbx').onclick=close;
+  document.getElementById('lbp').onclick=function(){show(idx-1)};
+  document.getElementById('lbn').onclick=function(){show(idx+1)};
+  lb.addEventListener('click',function(ev){if(ev.target===lb||ev.target.tagName==='FIGURE')close()});
+  document.addEventListener('keydown',function(ev){if(lb.hidden)return;
+    if(ev.key==='Escape')close();else if(ev.key==='ArrowLeft')show(idx-1);else if(ev.key==='ArrowRight')show(idx+1)});
+  var sx=null;lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',function(e){if(sx===null)return;var d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>50)show(idx+(d<0?1:-1));sx=null});
+
+  // reels: autoplay when visible, tap to pause, sound toggle
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.phone').forEach(function(p){
+    var v=p.querySelector('video'),s=p.querySelector('.snd');v.dataset.user='';
+    p.addEventListener('click',function(ev){
+      if(ev.target.closest('.snd'))return;
+      if(v.paused){v.play().catch(function(){});v.dataset.user=''}else{v.pause();v.dataset.user='paused'}
+    });
+    s.addEventListener('click',function(){
+      var on=v.muted;
+      document.querySelectorAll('.phone video').forEach(function(o){if(o!==v){o.muted=true;o.parentNode.querySelector('.snd').setAttribute('aria-pressed','false')}});
+      v.muted=!on;s.setAttribute('aria-pressed',String(on));s.setAttribute('aria-label',on?'Mute':'Turn sound on');
+      if(on&&v.paused)v.play().catch(function(){});
+    });
+    if(!reduce&&'IntersectionObserver' in window){
+      new IntersectionObserver(function(es){es.forEach(function(e){
+        if(e.isIntersecting){if(!v.dataset.user)v.play().catch(function(){})}else v.pause();
+      })},{threshold:.5}).observe(p);
+    }
+  });
+
+  // active nav link
+  var links=document.querySelectorAll('.nav a');
+  if('IntersectionObserver' in window){
+    var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){
+      links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});
+    document.querySelectorAll('section[id]').forEach(function(s){obs.observe(s)});
+  }
+})();
+</script>
+
+</body>
+</html>
